@@ -1,0 +1,118 @@
+body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+      scroll-behavior: smooth;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('ferrari.jpeg') no-repeat center center/cover;
+      opacity: 1;
+      z-index: -1;
+      filter: blur(2px);
+    }
+
+    .navbar {
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 80px 20px;
+    }
+
+    .section-light {
+      background-color: #ffffffcc;
+    }
+
+    .section-gray {
+      background-color: #f4f4f4cc;
+    }
+
+    footer {
+      background: #fff;
+      padding: 30px 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .nav-link {
+      color: #222 !important;
+    }
+
+    .nav-link:hover {
+      color: #007bff !important;
+    }
+
+    .feature-icon {
+      font-size: 3rem;
+      color: #007bff;
+      margin-bottom: 15px;
+    }
+
+    .whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1f1f1f;
+  background-color: #ffffff;
+  opacity: 0.9;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+#map-container {
+  position: fixed;     /* fixa na tela, não rola com a página */
+  bottom: 20px;        /* distância do rodapé */
+  left: 20px;          /* distância da borda esquerda */
+  width: 160px;        /* largura menor do mapa */
+  height: 130px;       /* altura menor do mapa */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 9999;       /* garante que fique acima dos outros elementos */
+  background: white;
+}
+
+.saltar {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.saltar:hover {
+  transform: translateY(-10px) scale(1.05);
+}
