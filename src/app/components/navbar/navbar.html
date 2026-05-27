@@ -1,0 +1,30 @@
+<nav class="navbar" [class.scrolled]="isScrolled()">
+  <div class="container">
+    <a class="brand" href="#home">
+      <img src="assets/images/ferrarilogo.png" alt="Jesuítas Auto Elétrica" />
+      <span>Jesuítas <strong>Auto Elétrica</strong></span>
+    </a>
+
+    <div class="nav-links" [class.open]="isMenuOpen()">
+      <a href="#home" (click)="closeMenu()">Início</a>
+      <a href="#about" (click)="closeMenu()">Sobre</a>
+      <a href="#services" (click)="closeMenu()">Serviços</a>
+      <a href="#gallery" (click)="closeMenu()">Especialidades</a>
+      <a
+        href="https://wa.me/5544991362007?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+        target="_blank"
+        class="whatsapp-link"
+        (click)="closeMenu()"
+      >
+        <i class="bi bi-whatsapp"></i>
+        WhatsApp
+      </a>
+    </div>
+
+    <button class="hamburger" (click)="toggleMenu()" [class.active]="isMenuOpen()" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>

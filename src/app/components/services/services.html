@@ -1,0 +1,23 @@
+<section id="services" class="services-section">
+  <div class="container">
+    <div class="section-header text-center">
+      <p class="eyebrow">O que fazemos</p>
+      <h2 class="section-title">Nossos Serviços</h2>
+      <p class="section-subtitle">Soluções completas em elétrica automotiva para o seu veículo</p>
+    </div>
+
+    <div class="row g-4">
+      @for (service of services; track service.title) {
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">
+              <i [class]="'bi ' + service.icon"></i>
+            </div>
+            <h5 class="service-title">{{ service.title }}</h5>
+            <p class="service-description">{{ service.description }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

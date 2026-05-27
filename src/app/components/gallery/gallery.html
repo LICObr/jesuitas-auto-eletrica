@@ -1,0 +1,24 @@
+<section id="gallery" class="gallery-section">
+  <div class="container">
+    <div class="section-header text-center">
+      <p class="eyebrow">Especialidades</p>
+      <h2 class="section-title">Nossas Especialidades</h2>
+      <p class="section-subtitle">Trabalhamos com os principais componentes do sistema elétrico automotivo</p>
+    </div>
+
+    <div class="row g-4">
+      @for (item of items; track item.alt) {
+        <div class="col-md-4">
+          <div class="gallery-card">
+            <div class="gallery-image-wrapper">
+              <img [src]="item.src" [alt]="item.alt" class="gallery-image" />
+            </div>
+            <div class="gallery-label">
+              <span>{{ item.label }}</span>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
