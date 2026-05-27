@@ -1,15 +1,15 @@
 <section id="services" class="services-section">
   <div class="container">
     <div class="section-header text-center">
-      <p class="eyebrow">O que fazemos</p>
-      <h2 class="section-title">Nossos Serviços</h2>
-      <p class="section-subtitle">Soluções completas em elétrica automotiva para o seu veículo</p>
+      <p class="eyebrow" animateOnScroll>O que fazemos</p>
+      <h2 class="section-title" animateOnScroll [delay]="100">Nossos Serviços</h2>
+      <p class="section-subtitle" animateOnScroll [delay]="180">Soluções completas em elétrica automotiva para o seu veículo</p>
     </div>
 
-    <div class="row g-4">
-      @for (service of services; track service.title) {
-        <div class="col-md-6 col-lg-4">
-          <div class="service-card">
+    <div class="row g-4 justify-content-center">
+      @for (service of services; track service.title; let i = $index) {
+        <div class="col-md-6 col-lg-4" animateOnScroll [delay]="i * 80">
+          <div class="service-card" spotlight>
             <div class="service-icon">
               <i [class]="'bi ' + service.icon"></i>
             </div>

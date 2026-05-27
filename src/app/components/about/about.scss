@@ -1,6 +1,7 @@
 .about-section {
   padding: 100px 0;
-  background-color: #0d0d0d;
+  background-color: var(--color-bg-alt);
+  transition: background-color 0.3s ease;
 }
 
 .eyebrow {
@@ -8,20 +9,20 @@
   font-weight: 600;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #e63946;
+  color: var(--color-primary);
   margin-bottom: 0.75rem;
 }
 
 .section-title {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #f1f1f1;
+  color: var(--color-text);
   margin-bottom: 1.5rem;
   line-height: 1.2;
 }
 
 .about-text {
-  color: #888;
+  color: var(--color-text-muted);
   font-size: 0.95rem;
   line-height: 1.8;
   margin-bottom: 1rem;
@@ -34,29 +35,29 @@
 }
 
 .stat-card {
-  background-color: #111;
-  border: 1px solid #1e1e1e;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
 
   &:hover {
-    border-color: #e63946;
+    border-color: var(--color-primary);
   }
 }
 
 .stat-value {
   font-size: 2.4rem;
   font-weight: 800;
-  color: #e63946;
+  color: var(--color-primary);
   line-height: 1;
 }
 
 .stat-label {
   font-size: 0.85rem;
-  color: #666;
+  color: var(--color-text-soft);
   font-weight: 400;
 }

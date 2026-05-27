@@ -1,6 +1,7 @@
 .gallery-section {
   padding: 100px 0;
-  background-color: #0d0d0d;
+  background-color: var(--color-bg-alt);
+  transition: background-color 0.3s ease;
 }
 
 .section-header {
@@ -12,46 +13,45 @@
   font-weight: 600;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #e63946;
+  color: var(--color-primary);
   margin-bottom: 0.75rem;
 }
 
 .section-title {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #f1f1f1;
+  color: var(--color-text);
   margin-bottom: 0.75rem;
 }
 
 .section-subtitle {
-  color: #666;
+  color: var(--color-text-muted);
   font-size: 0.95rem;
 }
 
 .gallery-card {
-  background-color: #111;
-  border: 1px solid #1a1a1a;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 10px;
   overflow: hidden;
-  transition: border-color 0.3s ease, transform 0.3s ease;
+  transition: border-color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
 
   &:hover {
-    border-color: #e63946;
+    border-color: var(--color-primary);
     transform: translateY(-4px);
 
-    .gallery-image {
-      transform: scale(1.04);
-    }
+    .gallery-image { transform: scale(1.04); }
   }
 }
 
 .gallery-image-wrapper {
   overflow: hidden;
   height: 220px;
-  background-color: #0a0a0a;
+  background-color: var(--color-bg);
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.3s ease;
 }
 
 .gallery-image {
@@ -64,11 +64,11 @@
 
 .gallery-label {
   padding: 1rem 1.25rem;
-  border-top: 1px solid #1a1a1a;
+  border-top: 1px solid var(--color-border);
 
   span {
     font-size: 0.9rem;
     font-weight: 600;
-    color: #adb5bd;
+    color: var(--color-text-muted);
   }
 }

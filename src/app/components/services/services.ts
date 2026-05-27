@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AnimateOnScrollDirective } from '../../directives/animate-on-scroll.directive';
+import { SpotlightDirective } from '../../directives/spotlight.directive';
 
 interface Service {
   icon: string;
@@ -9,7 +11,8 @@ interface Service {
 @Component({
   selector: 'app-services',
   templateUrl: './services.html',
-  styleUrl: './services.scss'
+  styleUrl: './services.scss',
+  imports: [AnimateOnScrollDirective, SpotlightDirective]
 })
 export class ServicesComponent {
   services: Service[] = [
@@ -42,6 +45,11 @@ export class ServicesComponent {
       icon: 'bi-truck',
       title: 'Caminhões e Pesados',
       description: 'Atendimento especializado para veículos pesados, ônibus e equipamentos agrícolas.'
+    },
+    {
+      icon: 'bi-shield-check',
+      title: 'Garantia de Serviço',
+      description: 'Trabalhamos com responsabilidade e comprometimento com o resultado.'
     }
   ];
 }

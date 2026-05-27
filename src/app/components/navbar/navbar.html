@@ -6,10 +6,10 @@
     </a>
 
     <div class="nav-links" [class.open]="isMenuOpen()">
-      <a href="#home" (click)="closeMenu()">Início</a>
-      <a href="#about" (click)="closeMenu()">Sobre</a>
-      <a href="#services" (click)="closeMenu()">Serviços</a>
-      <a href="#gallery" (click)="closeMenu()">Especialidades</a>
+      <a href="#home" [class.active]="activeSection() === 'home'" (click)="closeMenu()">Início</a>
+      <a href="#about" [class.active]="activeSection() === 'about'" (click)="closeMenu()">Sobre</a>
+      <a href="#services" [class.active]="activeSection() === 'services'" (click)="closeMenu()">Serviços</a>
+      <a href="#gallery" [class.active]="activeSection() === 'gallery'" (click)="closeMenu()">Especialidades</a>
       <a
         href="https://wa.me/5544991362007?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
         target="_blank"
@@ -20,6 +20,10 @@
         WhatsApp
       </a>
     </div>
+
+    <button class="theme-toggle" (click)="theme.toggle()" [title]="theme.isDark() ? 'Modo claro' : 'Modo escuro'">
+      <i [class]="theme.isDark() ? 'bi bi-sun-fill' : 'bi bi-moon-fill'"></i>
+    </button>
 
     <button class="hamburger" (click)="toggleMenu()" [class.active]="isMenuOpen()" aria-label="Menu">
       <span></span>

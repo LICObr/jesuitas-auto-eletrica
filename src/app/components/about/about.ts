@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
+import { AnimateOnScrollDirective } from '../../directives/animate-on-scroll.directive';
+import { CounterDirective } from '../../directives/counter.directive';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.html',
-  styleUrl: './about.scss'
+  styleUrl: './about.scss',
+  imports: [AnimateOnScrollDirective, CounterDirective]
 })
 export class AboutComponent {
   stats = [
-    { value: '15+', label: 'Anos de experiência' },
-    { value: '5k+', label: 'Veículos atendidos' },
-    { value: '100%', label: 'Peças com garantia' },
-    { value: '24h', label: 'Diagnóstico rápido' }
+    { numeric: 26, suffix: '+', label: 'Anos de experiência' },
+    { numeric: 5,  suffix: 'k+', label: 'Veículos atendidos' },
+    { numeric: 100, suffix: '%', label: 'Satisfação dos clientes' },
+    { numeric: 24, suffix: 'h', label: 'Diagnóstico rápido' }
   ];
 }

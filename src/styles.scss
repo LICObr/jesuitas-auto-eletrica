@@ -1,15 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-:root {
+:root,
+[data-theme="dark"] {
   --color-bg: #0a0a0a;
+  --color-bg-alt: #0d0d0d;
   --color-surface: #111111;
   --color-surface-2: #1a1a1a;
   --color-primary: #e63946;
   --color-primary-dark: #c1121f;
   --color-text: #f1f1f1;
   --color-text-muted: #888888;
-  --color-border: #222222;
+  --color-text-soft: #666666;
+  --color-border: #1e1e1e;
+  --color-border-soft: #2a2a2a;
   --navbar-height: 70px;
+}
+
+[data-theme="light"] {
+  --color-bg: #f2f4f7;
+  --color-bg-alt: #eaecf0;
+  --color-surface: #ffffff;
+  --color-surface-2: #f8f9fb;
+  --color-primary: #e63946;
+  --color-primary-dark: #c1121f;
+  --color-text: #111111;
+  --color-text-muted: #555555;
+  --color-text-soft: #777777;
+  --color-border: #e0e3e8;
+  --color-border-soft: #d0d4da;
 }
 
 * {
@@ -27,6 +45,7 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3, h4, h5 {
@@ -37,19 +56,6 @@ h1, h2, h3, h4, h5 {
 a {
   text-decoration: none;
   color: inherit;
-}
-
-.section-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.section-subtitle {
-  color: var(--color-text-muted);
-  font-size: 1rem;
-  font-weight: 400;
-  margin-bottom: 3rem;
 }
 
 .btn-primary-custom {
@@ -76,7 +82,7 @@ a {
   display: inline-block;
   background-color: transparent;
   color: var(--color-text);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-border-soft);
   padding: 0.75rem 2rem;
   border-radius: 4px;
   font-weight: 500;

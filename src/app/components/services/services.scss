@@ -1,6 +1,7 @@
 .services-section {
   padding: 100px 0;
-  background-color: #0a0a0a;
+  background-color: var(--color-bg);
+  transition: background-color 0.3s ease;
 }
 
 .section-header {
@@ -12,34 +13,54 @@
   font-weight: 600;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #e63946;
+  color: var(--color-primary);
   margin-bottom: 0.75rem;
 }
 
 .section-title {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #f1f1f1;
+  color: var(--color-text);
   margin-bottom: 0.75rem;
 }
 
 .section-subtitle {
-  color: #666;
+  color: var(--color-text-muted);
   font-size: 0.95rem;
 }
 
 .service-card {
-  background-color: #111;
-  border: 1px solid #1a1a1a;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 10px;
   padding: 2rem 1.75rem;
   height: 100%;
-  transition: border-color 0.3s ease, transform 0.3s ease;
+  transition: border-color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      220px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(230, 57, 70, 0.09),
+      transparent 80%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
 
   &:hover {
-    border-color: #e63946;
+    border-color: var(--color-primary);
     transform: translateY(-4px);
+
+    &::before { opacity: 1; }
   }
+
+  > * { position: relative; z-index: 1; }
 }
 
 .service-icon {
@@ -54,20 +75,20 @@
 
   i {
     font-size: 1.5rem;
-    color: #e63946;
+    color: var(--color-primary);
   }
 }
 
 .service-title {
   font-size: 1rem;
   font-weight: 600;
-  color: #f1f1f1;
+  color: var(--color-text);
   margin-bottom: 0.6rem;
 }
 
 .service-description {
   font-size: 0.875rem;
-  color: #666;
+  color: var(--color-text-muted);
   line-height: 1.7;
   margin: 0;
 }

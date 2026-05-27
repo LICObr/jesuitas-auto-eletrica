@@ -2,25 +2,30 @@
   <div class="container">
     <div class="row align-items-center g-5">
       <div class="col-lg-6">
-        <p class="eyebrow">Quem somos</p>
-        <h2 class="section-title">Uma oficina com<br>anos de tradição</h2>
-        <p class="about-text">
+        <p class="eyebrow" animateOnScroll>Quem somos</p>
+        <h2 class="section-title" animateOnScroll [delay]="100">Uma oficina com<br>anos de tradição</h2>
+        <p class="about-text" animateOnScroll [delay]="200">
           Somos especializados em elétrica automotiva, atendendo carros e caminhões com qualidade técnica
           e compromisso com o cliente. Contamos com equipamentos modernos e profissionais capacitados
           para oferecer o melhor diagnóstico e reparo.
         </p>
-        <p class="about-text">
+        <p class="about-text" animateOnScroll [delay]="280">
           Trabalhamos com peças de alta procedência, garantindo durabilidade e segurança para o seu veículo.
           Nosso atendimento é pensado para que você saia satisfeito e volte à estrada com confiança.
         </p>
-        <a href="#services" class="btn-primary-custom mt-3">Nossos serviços</a>
+        <a href="#services" class="btn-primary-custom mt-3" animateOnScroll [delay]="360">Nossos serviços</a>
       </div>
 
       <div class="col-lg-6">
         <div class="stats-grid">
-          @for (stat of stats; track stat.label) {
-            <div class="stat-card">
-              <span class="stat-value">{{ stat.value }}</span>
+          @for (stat of stats; track stat.label; let i = $index) {
+            <div class="stat-card" animateOnScroll [delay]="i * 100">
+              <span
+                class="stat-value"
+                counter
+                [target]="stat.numeric"
+                [suffix]="stat.suffix"
+              >{{ stat.numeric }}{{ stat.suffix }}</span>
               <span class="stat-label">{{ stat.label }}</span>
             </div>
           }

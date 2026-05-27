@@ -1,7 +1,8 @@
 .footer {
-  background-color: #0a0a0a;
-  border-top: 1px solid #1a1a1a;
+  background-color: var(--color-bg);
+  border-top: 1px solid var(--color-border);
   padding: 80px 0 0;
+  transition: background-color 0.3s ease;
 }
 
 .footer-brand {
@@ -9,19 +10,15 @@
   align-items: center;
   gap: 10px;
   margin-bottom: 1rem;
-  color: #f1f1f1;
+  color: var(--color-text);
   font-size: 1rem;
 
-  img {
-    height: 34px;
-    width: auto;
-  }
-
-  strong { color: #e63946; }
+  img { height: 34px; width: auto; }
+  strong { color: var(--color-primary); }
 }
 
 .footer-desc {
-  color: #555;
+  color: var(--color-text-muted);
   font-size: 0.875rem;
   line-height: 1.7;
   max-width: 300px;
@@ -32,7 +29,7 @@
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #666;
+  color: var(--color-text-soft);
   margin-bottom: 1.25rem;
 }
 
@@ -48,11 +45,11 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #888;
+    color: var(--color-text-muted);
     font-size: 0.875rem;
 
     i {
-      color: #e63946;
+      color: var(--color-primary);
       font-size: 1rem;
       width: 18px;
       text-align: center;
@@ -60,10 +57,9 @@
     }
 
     a {
-      color: #888;
+      color: var(--color-text-muted);
       transition: color 0.2s ease;
-
-      &:hover { color: #f1f1f1; }
+      &:hover { color: var(--color-text); }
     }
   }
 }
@@ -71,17 +67,17 @@
 .map-wrapper {
   border-radius: 8px;
   overflow: hidden;
-  border: 1px solid #1a1a1a;
+  border: 1px solid var(--color-border);
 }
 
 .footer-bottom {
   margin-top: 4rem;
   padding: 1.5rem 0;
-  border-top: 1px solid #1a1a1a;
+  border-top: 1px solid var(--color-border);
   text-align: center;
 
   p {
-    color: #444;
+    color: var(--color-text-soft);
     font-size: 0.8rem;
     margin: 0;
   }
@@ -102,10 +98,7 @@
   z-index: 999;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 
-  i {
-    font-size: 1.5rem;
-    color: #fff;
-  }
+  i { font-size: 1.5rem; color: #fff; }
 
   &:hover {
     transform: scale(1.08);
